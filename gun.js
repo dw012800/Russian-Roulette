@@ -1,4 +1,3 @@
-module.expor
 
 class gun {
     constructor(chamber) {
