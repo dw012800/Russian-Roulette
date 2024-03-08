@@ -14,6 +14,8 @@ class game {
     start() {
         let chamber = this.gun.loadGun(1)
         this.gun.shuffle(chamber)
+        const text = document.querySelector('text')
+        text.innerText = `Gun is loaded, it is ${this.currentPlayer}'s turn.`
     }
 
     switchPlayers(){ //Switch player logic is to have an array of players which pushes out the first index and adds them to the back
@@ -23,8 +25,8 @@ class game {
 
 }
 
-window.onload{
-
+window.onload = () => {
+    let game = new game()
         //Add a way for the rounds to be rotated between players 
         start();
 
@@ -38,12 +40,17 @@ window.onload{
     })  */        
 
         document.querySelector('.shootme').addEventListener('click', (event) => {
-            event.preventDefault()
-            let result = this.gun.pulltrigger()
+            event.preventDefault();
+            let result = this.gun.pulltrigger();
             if(result === true){
-                this.currentPlayer.hp -= 1
-                this.Game.switchPlayers();
+                this.players.shift()
+                const text = document.querySelector('text')
+                text.innerText = `${currentPlayer} has died`
+
             }else if(result === false){
+                this.game.switchPlayers();
+                const text = document.querySelector('text')
+                text.innerText = `Was a blank, now its ${this.currentPlayer}'s turn.`
 
             }
             //Need to pull trigger for yourself and see if it is going to be valid with a true statement

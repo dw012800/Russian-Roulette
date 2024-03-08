@@ -1,6 +1,6 @@
 
 class gun {
-    constructor(chamber) {
+    constructor() {
         this.chamber = [];
     }
 
@@ -11,7 +11,7 @@ class gun {
         while(chamber.length < 6){
             chamber.push(false)
         }
-        return gun;
+        return chamber;
     }
     
     shuffle(arr) {
@@ -37,3 +37,5 @@ class gun {
         return fired;
     }
 }
+
+console.log(gun.loadGun(1))

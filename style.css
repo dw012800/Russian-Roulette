@@ -1,6 +1,22 @@
+body{
+    background-color: rgb(213, 208, 208);
+}
+
 #buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20em;
+}
+
+.shoot-me{
+    height: 5rem;
+}
+
+.text-box{
+    position: fixed;
+    height: 12em;
+    width: 1400px;
+    bottom: 10px;
+    border: solid;
 }
