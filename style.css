@@ -4,13 +4,24 @@ body{
     height: 100vh;
 }
 
+header{
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 45px;
+    text-decoration: underline;
+}
+
 #buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 20em;
 }
 
+.shoot-op,
 .shoot-me{
     height: 5rem;
 }
@@ -25,6 +36,11 @@ body{
     border: solid;
 }
 
+.text{
+    position: fixed;
+    left: 1rem;
+}
+
 .container {
     position: relative;
     border: 2px solid black;
@@ -33,6 +49,20 @@ body{
     width: 200px;
   }
   
+  .p1hp {
+    position: fixed;
+    max-width: fit-content;
+    left: 10%;
+    top: 20%;
+  }
+
+  .p2hp{
+    position: fixed;
+    max-width: fit-content;
+    right: 10%;
+    top: 20%;
+  }
+
   .player1-dead-person,
   .player1-live-person,
   .player2-dead-person,
@@ -46,11 +76,13 @@ body{
   .player1-dead-person,
   .player1-live-person{
     left: 10%;
+    bottom: 30%;
   }
   
   .player2-dead-person,
   .player2-live-person{
     right: 10%;
+    bottom: 30%;
   }
 
   .active {
