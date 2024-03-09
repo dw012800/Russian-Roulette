@@ -77,23 +77,12 @@ class game {
         this.nextPlayer = this.players[1];
     }
 
-    // updatehp(){
-    //     const
-    // }
 }
 
-//  window.onload = () => {
     let newGame = new game()
         //Add a way for the rounds to be rotated between players 
         newGame.start();
-       /* document.querySelector('.shootop').addEventListener('click', (event) => {
-            event.preventDefault()
-            let result = this.gun.pulltrigger()
-            if(result === true){  
-                this.nextPlayer.hp -= 1;
-            }
-                    
-    })  */        
+
         const p1hpbar = document.querySelector('.p1hp')
         p1hpbar.innerText = `Player1: ${newGame.player1.hp} HP`
 
@@ -226,11 +215,3 @@ class game {
                 }
             } //Need to pull trigger for yourself and see if it is going to be valid with a true statement
     )
-
-
-
-// const rotation = () => {
-//     for(let i = 1; i < 4; i++){
-
-//     }
-// }
