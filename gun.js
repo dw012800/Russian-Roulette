@@ -1,17 +1,17 @@
 
-class gun {
+class Gun {
     constructor() {
         this.chamber = [];
     }
 
     loadGun(round){
         for(let i = 0; i < round; i++){
-            chamber.push(true);
+            this.chamber.push(true);
         }
-        while(chamber.length < 6){
-            chamber.push(false)
+        while(this.chamber.length < 6){
+            this.chamber.push(false)
         }
-        return chamber;
+        return this.chamber;
     }
     
     shuffle(arr) {
@@ -33,9 +33,11 @@ class gun {
       }
     
     pulltrigger() {
-        let fired = gun.shift(); //the fired shot is the shifted bullet in the array
+        let fired = Gun.shift(); //the fired shot is the shifted bullet in the array
         return fired;
     }
 }
 
-console.log(gun.loadGun(1))
+
+let myGun = new Gun()
+console.log(myGun.shuffle(myGun.loadGun(1)))
